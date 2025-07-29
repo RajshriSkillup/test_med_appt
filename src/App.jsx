@@ -9,9 +9,9 @@ import Navbar from './Components/Navbar/Navbar';
 import Landing_Page from './Components/Landing_Page/Landing_Page';
 import Login from './Components/Login/Login'
 import Sign_Up from './Components/Sign_Up/Sign_Up';
-import AppointmentFormIC from './Components/InstantConsultation/AppointmentFormIC/AppointmentFormIC';
-import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
-import FindDoctorSearchIC from './Components/InstantConsultation/FindDoctorSearchIC/FindDoctorSearchIC';
+// import AppointmentFormIC from './Components/InstantConsultation/AppointmentFormIC/AppointmentFormIC';
+import InstantConsultation from './Components/InstantConsultationBooking/InstantConsultation'
+// import FindDoctorSearchIC from './Components/InstantConsultationBooking/FindDoctorSearchIC/FindDoctorSearchIC'
 // Function component for the main App
 function App() {
 
@@ -30,7 +30,7 @@ function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<Sign_Up/>}/>
             <Route path='/instant-consultation' element={<InstantConsultation/>} />
-            <Route path="/finddoctor" element={<FindDoctorSearchIC />} />
+            {/* <Route path="/finddoctor" element={<FindDoctorSearchIC />} /> */}
             </Routes>
           
         </BrowserRouter>
