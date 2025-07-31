@@ -70,7 +70,7 @@ const Navbar = () => {
                         <li className="link">
                             <Link to="/report">Your Report</Link>
                         </li>
-                        <li className="link dropdown">
+                        <li className="link nav__dropdown">
                             <span>Welcome {username}</span>
                             <div className="dropdown-content">
                                 <Link to="/profile">Profile</Link>
