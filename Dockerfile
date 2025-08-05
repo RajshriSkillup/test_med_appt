@@ -1,5 +1,5 @@
-# Use official `Node.js` image as the base
-FROM node:18
+# Use official Node.js image as the base
+FROM node:20
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -13,8 +13,14 @@ RUN npm install
 # Copy rest of the application to container
 COPY . .
 
+# Build the React/Vite application
+RUN npm run build
+
+# Install serve to serve the production build
+RUN npm install -g serve
+
 # Expose the port your app runs on
-EXPOSE 3000
+EXPOSE 4173
 
 # Command to run your application
-CMD ["npm", "start"]
+CMD ["serve", "-s", "server/build", "-l", "4173"]
